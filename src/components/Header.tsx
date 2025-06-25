@@ -54,7 +54,7 @@ const Header = () => {
                   location.pathname === '/join' ? 'text-orange-500' : 'text-gray-300'
                 }`}
               >
-                Join
+                Join tribe
               </Link>
             </nav>
             
@@ -76,11 +76,6 @@ const Header = () => {
                 </>
               ) : (
                 <>
-                  <Link to="/auth">
-                    <Button variant="ghost" size="sm" className="text-gray-300 hover:text-orange-500">
-                      Login
-                    </Button>
-                  </Link>
                   <Link to="/join">
                     <Button size="sm" className="sigma-button">
                       Join
