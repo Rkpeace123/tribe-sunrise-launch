@@ -36,7 +36,7 @@ const JoinTribe = () => {
     setIsLoading(true);
     
     try {
-      await fetch("https://forzio.app.n8n.cloud/webhook/RUNTRIBE", {
+      await fetch("https://forzio.app.n8n.cloud/webhook-test/RUNTRIBE", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
