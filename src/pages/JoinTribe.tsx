@@ -164,11 +164,7 @@ const JoinTribe = () => {
               <span className="text-orange-500">One Tribe. One Journey.</span>
             </h1>
           </div>
-          <img
-            src="/runtribe-bg.jpg"
-            alt="Run Tribe Background"
-            className="w-full h-full object-cover"
-          />
+         
         </div>
       </div>
 
