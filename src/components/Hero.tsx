@@ -18,7 +18,7 @@ const Hero = () => {
     setIsLoading(true);
 
     try {
-      await fetch("https://forzio.app.n8n.cloud/webhook-test/RUNTRIBE", {
+      await fetch("https://forzio.app.n8n.cloud/webhook/RUNTRIBE", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
