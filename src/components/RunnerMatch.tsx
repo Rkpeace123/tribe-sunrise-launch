@@ -17,7 +17,7 @@ const RunnerMatch = () => {
         source: "runner_match_component"
       };
 
-      await fetch("https://forzio.app.n8n.cloud/webhook/RUNTRIBE", {
+      await fetch("https://forzio.app.n8n.cloud/webhook-test/R2", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
