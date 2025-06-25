@@ -49,7 +49,7 @@ const Hero = () => {
 
   return (
     <section 
-      className="min-h-screen flex items-center justify-center bg-black bg-[url('/run-bg.jpg')] bg-cover bg-center relative"
+      className="min-h-screen flex items-center justify-center bg-black bg-[url('/run-bg.png')] bg-cover bg-center relative"
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-0"></div>
