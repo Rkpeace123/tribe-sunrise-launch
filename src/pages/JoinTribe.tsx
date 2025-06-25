@@ -25,7 +25,7 @@ const JoinTribe = () => {
     setIsLoading(true);
 
     try {
-      await fetch("https://forzio.app.n8n.cloud/webhook-test/R1", {
+      await fetch("https://forzio.app.n8n.cloud/webhook/R1", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -121,6 +121,7 @@ const JoinTribe = () => {
                 value={regForm.name}
                 onChange={(e) => setRegForm({ ...regForm, name: e.target.value })}
                 required
+                className="bg-black text-white border border-gray-400 placeholder-gray-400"
               />
               <Input
                 type="email"
@@ -128,6 +129,7 @@ const JoinTribe = () => {
                 value={regForm.email}
                 onChange={(e) => setRegForm({ ...regForm, email: e.target.value })}
                 required
+                className="bg-black text-white border border-gray-400 placeholder-gray-400"
               />
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
@@ -137,19 +139,21 @@ const JoinTribe = () => {
                 value={regForm.phone}
                 onChange={(e) => setRegForm({ ...regForm, phone: e.target.value })}
                 required
+                className="bg-black text-white border border-gray-400 placeholder-gray-400"
               />
               <Input
                 type="text"
                 placeholder="City / Area"
                 value={regForm.location}
                 onChange={(e) => setRegForm({ ...regForm, location: e.target.value })}
+                className="bg-black text-white border border-gray-400 placeholder-gray-400"
               />
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
               <select
                 value={regForm.fitnessLevel}
                 onChange={(e) => setRegForm({ ...regForm, fitnessLevel: e.target.value })}
-                className="border rounded px-3 py-2 w-full"
+                className="bg-black text-white border border-gray-400 px-3 py-2 w-full"
               >
                 <option value="">Running Level</option>
                 <option value="beginner">Beginner</option>
@@ -159,7 +163,7 @@ const JoinTribe = () => {
               <select
                 value={regForm.availability}
                 onChange={(e) => setRegForm({ ...regForm, availability: e.target.value })}
-                className="border rounded px-3 py-2 w-full"
+                className="bg-black text-white border border-gray-400 px-3 py-2 w-full"
               >
                 <option value="">Preferred Running Time</option>
                 <option value="morning">Morning</option>
@@ -172,12 +176,13 @@ const JoinTribe = () => {
               placeholder="Profession / Field"
               value={regForm.profession}
               onChange={(e) => setRegForm({ ...regForm, profession: e.target.value })}
+              className="bg-black text-white border border-gray-400 placeholder-gray-400"
             />
             <textarea
               placeholder="Networking Goal (e.g., Career, Business, Mentorship)"
               value={regForm.goals}
               onChange={(e) => setRegForm({ ...regForm, goals: e.target.value })}
-              className="border rounded px-3 py-2 w-full h-24 resize-none"
+              className="bg-black text-white border border-gray-400 placeholder-gray-400 px-3 py-2 w-full h-24 resize-none"
             />
 
             <Button
