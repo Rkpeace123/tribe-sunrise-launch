@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { Link } from "react-router-dom";
@@ -17,7 +16,7 @@ const Hero = () => {
     }
 
     setIsLoading(true);
-    
+
     try {
       await fetch("http://localhost:5678/webhook/runtribe", {
         method: "POST",
@@ -35,11 +34,11 @@ const Hero = () => {
         title: "Let's get started!",
         description: "Redirecting you to join the tribe...",
       });
-      
+
       setTimeout(() => {
         window.location.href = '/join';
       }, 1000);
-      
+
     } catch (error) {
       console.error("Error:", error);
       window.location.href = '/join';
@@ -49,33 +48,39 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-black">
-      <div className="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto py-20">
+    <section 
+      className="min-h-screen flex items-center justify-center bg-black bg-[url('/images/run-bg.jpg')] bg-cover bg-center relative"
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60 z-0"></div>
+
+      {/* Content */}
+      <div className="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto py-20 relative z-10">
         <div className="mb-16">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold sigma-heading mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold sigma-heading mb-8 leading-tight text-white">
             RUN.<br/>
             <span className="text-orange-500">VIBE.</span><br/>
             <span className="text-orange-500">CONNECT.</span>
           </h1>
         </div>
-        
+
         <div className="sigma-card mb-12 max-w-3xl mx-auto">
           <p className="text-2xl sm:text-3xl font-bold sigma-heading mb-6 text-white">
             CHENNAI'S ELITE RUNNING COMMUNITY
           </p>
-          
+
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             Join Chennai's most <span className="text-orange-500 font-semibold">powerful</span> running community! 
             Every Saturday at 6 AM, we gather at Thiruvanmiyur Beach for energy, motivation, and connections.
           </p>
-          
+
           <div className="inline-flex items-center bg-orange-500 text-black px-8 py-3 rounded-md font-semibold text-lg">
             <span className="mr-2">🚀</span>
             FIRST SESSION LAUNCHING SOON
             <span className="ml-2">🚀</span>
           </div>
         </div>
-        
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
           <Button 
             onClick={handleJoinTribe}
@@ -84,7 +89,7 @@ const Hero = () => {
           >
             {isLoading ? "JOINING..." : "JOIN THE TRIBE 🔥"}
           </Button>
-          
+
           <Link to="/about">
             <Button 
               variant="outline" 
