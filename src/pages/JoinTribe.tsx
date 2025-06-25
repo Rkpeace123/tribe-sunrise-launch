@@ -25,7 +25,7 @@ const JoinTribe = () => {
     setIsLoading(true);
 
     try {
-      await fetch("https://forzio.app.n8n.cloud/webhook/R1", {
+      await fetch("https://forzio.app.n8n.cloud/webhook-test/R1", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,9 +78,9 @@ const JoinTribe = () => {
         </div>
 
         {/* Flow Chart */}
-        <div className="bg-gray-900 rounded-2xl p-6 sm:p-10 mb-16 w-full max-w-4xl">
+        <div className="bg-gray-900 text-white rounded-2xl p-6 sm:p-10 mb-16 w-full max-w-4xl">
           <h2 className="text-2xl font-semibold text-center text-orange-400 mb-6">How It Works</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center text-sm text-white">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center text-sm">
             <div className="flex flex-col items-center">
               <span className="text-2xl">👋</span>
               <p className="mt-2">You Join</p>
