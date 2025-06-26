@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -25,7 +25,7 @@
     --border: 0 0% 15%;
     --input: 0 0% 12%;
     --ring: 25 100% 52%;
-    --radius: 0.5rem;
+    --radius: 0.75rem;
   }
 }
 
@@ -35,28 +35,34 @@
   }
 
   body {
-    @apply bg-black text-white font-inter antialiased;
+    @apply bg-black text-white font-space antialiased;
+    background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #1a0a00 100%);
+    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold uppercase tracking-wide text-white;
+    @apply font-space font-bold text-white;
   }
 }
 
 @layer components {
-  .sigma-heading {
-    @apply font-bold uppercase tracking-wide text-white;
+  .genz-button {
+    @apply bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-lg hover:shadow-orange-500/25 transform hover:scale-105 active:scale-95 text-sm;
   }
   
-  .sigma-button {
-    @apply bg-orange-500 hover:bg-orange-600 text-black font-semibold px-4 py-2 rounded-md transition-colors duration-200;
+  .genz-button-outline {
+    @apply border-2 border-orange-500 bg-transparent text-orange-500 hover:bg-orange-500 hover:text-black px-6 py-2.5 rounded-xl transition-all duration-300 font-semibold text-sm transform hover:scale-105 active:scale-95;
   }
   
-  .sigma-input {
-    @apply bg-gray-900 border border-gray-700 text-white placeholder-gray-400 rounded-md focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors duration-200;
+  .genz-input {
+    @apply bg-gray-900/50 border border-gray-700 text-white placeholder-gray-400 rounded-xl focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all duration-200 px-4 py-3 text-sm backdrop-blur-sm;
   }
   
-  .sigma-card {
-    @apply bg-gray-900 border border-gray-800 rounded-lg p-6;
+  .genz-card {
+    @apply bg-gray-900/30 border border-gray-800/50 rounded-2xl p-6 backdrop-blur-sm;
+  }
+
+  .genz-heading {
+    @apply font-space font-bold tracking-tight;
   }
 }

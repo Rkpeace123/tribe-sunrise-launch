@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -20,7 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				inter: ['Inter', 'sans-serif'],
+				space: ['Space Grotesk', 'sans-serif'],
+				poppins: ['Poppins', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -66,7 +66,6 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Cloka-style custom colors
 				orange: {
 					50: '#fff7ed',
 					100: '#ffedd5',
